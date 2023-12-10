@@ -1,0 +1,18 @@
+
+
+service: big-mouth-jl
+
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+
+functions:
+  get-index:
+    handler: functions/get-index.handler
+    events:
+      - http: 
+          path: /
+          method: get
